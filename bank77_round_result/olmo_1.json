@@ -1,0 +1,147 @@
+[
+  {
+    "text": "How do I locate my card?",
+    "label": "card_arrival",
+    "pred": "locate_card"
+  },
+  {
+    "text": "Why won't my card show up on the app?",
+    "label": "card_linking",
+    "pred": "card_not_found"
+  },
+  {
+    "text": "I need to know your exchange rates.",
+    "label": "exchange_rate",
+    "pred": "exchange_rates"
+  },
+  {
+    "text": "I purchased something in a foreign currency but the rate applied is wrong",
+    "label": "card_payment_wrong_exchange_rate",
+    "pred": "exchange_rate_mismatch"
+  },
+  {
+    "text": "My statement has a dollar I have been charged showing up on it.",
+    "label": "extra_charge_on_statement",
+    "pred": "disputed_payment_on_statement"
+  },
+  {
+    "text": "My withdrawl is still pending.  Why?",
+    "label": "pending_cash_withdrawal",
+    "pred": "pending_cash_withdrawal"
+  },
+  {
+    "text": "If I request that my funds be held, what currencies do you use?",
+    "label": "fiat_currency_support",
+    "pred": "hold_funds_for_customer"
+  },
+  {
+    "text": "I need my card now!",
+    "label": "card_delivery_estimate",
+    "pred": "urgent_card_delivery"
+  },
+  {
+    "text": "When traveling, can I auto top-up my card at certain times?",
+    "label": "automatic_top_up",
+    "pred": "auto_top_up_on_travel"
+  },
+  {
+    "text": "I've tried my card a bunch of times and it never worked.",
+    "label": "card_not_working",
+    "pred": "card_not_working"
+  },
+  {
+    "text": "May I exchange currencies with this?",
+    "label": "exchange_via_app",
+    "pred": "exchange_currencies"
+  },
+  {
+    "text": "My entire gym bag, including my wallet, was stolen out of my locker today. Everything in my wallet is gone - how do I block the card to make it can't be used?",
+    "label": "lost_or_stolen_card",
+    "pred": "blocked_card"
+  },
+  {
+    "text": "how old do i need to be to get an account for myself",
+    "label": "age_limit",
+    "pred": "age_limit_for_account_creation"
+  },
+  {
+    "text": "How do I get my PIN unlocked?",
+    "label": "pin_blocked",
+    "pred": "unlock_pin"
+  },
+  {
+    "text": "Are contactless payments enabled on my new card?",
+    "label": "contactless_not_working",
+    "pred": "contactless_payment"
+  },
+  {
+    "text": "how much do you charge to accept transfers",
+    "label": "top_up_by_bank_transfer_charge",
+    "pred": "charge_for_transfers"
+  },
+  {
+    "text": "new customer and filling gas today, it's not working, the thing shows pending half an hour!",
+    "label": "pending_top_up",
+    "pred": "gas_payment_not_received"
+  },
+  {
+    "text": "I made a transaction this morning and would like to revert it.",
+    "label": "cancel_transfer",
+    "pred": "reverse_transaction"
+  },
+  {
+    "text": "can you limit my top up?",
+    "label": "top_up_limits",
+    "pred": "limit_top_up"
+  },
+  {
+    "text": "I don't know if this is an issue with the ATM or my account, but I just tried withdrawing 30 pounds from the ATM I'm at now and it only gave me 10. Is this a glitch or what exactly is going on?",
+    "label": "wrong_amount_of_cash_received",
+    "pred": "30_pounds_shortfall"
+  },
+  {
+    "text": "I payed with a card and was charged an extra fee",
+    "label": "card_payment_fee_charged",
+    "pred": "extra_charge_on_card_payment"
+  },
+  {
+    "text": "I completed an in country transfer a few days ago and was sure to check the account information several times since the transaction was completed, but the funds are still not available. What is the problem?",
+    "label": "transfer_not_received_by_recipient",
+    "pred": "pending_in_country_transfer"
+  },
+  {
+    "text": "To add money to my account, what currencies can I use?",
+    "label": "supported_cards_and_currencies",
+    "pred": "fiat_currency_support"
+  },
+  {
+    "text": "Where can I obtain my virtual card?",
+    "label": "getting_virtual_card",
+    "pred": "get_virtual_card"
+  },
+  {
+    "text": "Will my card be accepted all over the world?",
+    "label": "card_acceptance",
+    "pred": "international_card_acceptance"
+  },
+  {
+    "text": "My top-up was cancelled; will I receive a refund?",
+    "label": "top_up_reverted",
+    "pred": "refund_not_received"
+  },
+  {
+    "text": "I tried making an update to my balance using cheque just yesterday but it doesn't appear to have worked. Should this not be a faster process? I need you to please check over my account because something has went wrong.",
+    "label": "balance_not_updated_after_cheque_or_cash_deposit",
+    "pred": "balance_update_not_received"
+  },
+  {
+    "text": "I have a strange payment in my statement",
+    "label": "card_payment_not_recognised",
+    "pred": "review_payment_details"
+  },
+  {
+    "text": "I no longer live at my address on file, how do I change it?",
+    "label": "edit_personal_details",
+    "pred": "change_address_on_file"
+  }
+]
