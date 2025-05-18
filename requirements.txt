@@ -5,7 +5,7 @@ rwkv
 huggingface-hub
 openai
 anthropic
-mamba-ssm
+# mamba-ssm
 vertexai
 lmdeploy
 
