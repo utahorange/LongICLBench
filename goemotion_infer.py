@@ -8,7 +8,7 @@ import argparse
 import re
 from openai import OpenAI
 import anthropic
-from mamba_ssm.models.mixer_seq_simple import MambaLMHeadModel
+# from mamba_ssm.models.mixer_seq_simple import MambaLMHeadModel
 import vertexai
 from vertexai.generative_models import GenerativeModel, Part, GenerationConfig
 from lmdeploy import pipeline, GenerationConfig, TurbomindEngineConfig
