@@ -10,8 +10,8 @@ from openai import OpenAI
 import anthropic
 import vertexai
 from vertexai.generative_models import GenerativeModel, Part, GenerationConfig
-from mamba_ssm.models.mixer_seq_simple import MambaLMHeadModel
-from lmdeploy import pipeline, GenerationConfig, TurbomindEngineConfig
+# from mamba_ssm.models.mixer_seq_simple import MambaLMHeadModel
+# from lmdeploy import pipeline, GenerationConfig, TurbomindEngineConfig
 
 PROJECT_ID = "gemini-infer"  # @param {type:"string"}
 LOCATION = "us-central1"  # @param {type:"string"}

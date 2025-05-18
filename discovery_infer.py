@@ -9,10 +9,10 @@ import argparse
 import re
 from openai import OpenAI
 import anthropic
-from mamba_ssm.models.mixer_seq_simple import MambaLMHeadModel
+# from mamba_ssm.models.mixer_seq_simple import MambaLMHeadModel
 import vertexai
 from vertexai.generative_models import GenerativeModel, Part, GenerationConfig
-from lmdeploy import pipeline, GenerationConfig, TurbomindEngineConfig
+# from lmdeploy import pipeline, GenerationConfig, TurbomindEngineConfig
 
 import os
 import json
@@ -320,6 +320,10 @@ elif args.model == 'mamba':
     model_path = 'state-spaces/mamba-2.8b'
 elif args.model == 'gemini':
     model_path = "gemini-1.0-pro"
+elif args.model == 'olmo':
+    model_path = "allenai/OLMo-2-0425-1B-Instruct"
+else:
+    model_path = args.model # or maybe throw an error?
 
 # load tokenizer
 if args.model == 'yi':
@@ -367,6 +371,8 @@ elif args.model == 'longllama':
                                                  mem_attention_grouping=(4, 2048),)
 elif args.model == 'mamba':
     model = MambaLMHeadModel.from_pretrained(model_path, device='cuda:0', dtype=torch.float16)
+elif args.model == 'olmo':
+    model = AutoModelForCausalLM.from_pretrained(model_path, trust_remote_code=True)
 else:
     model = AutoModelForCausalLM.from_pretrained(model_path, trust_remote_code=True, torch_dtype=torch.float16).cuda()
 if args.model != 'gpt4' and args.model != 'claude3' and args.model != 'gemini' and args.model != 'internlm':
@@ -503,6 +509,17 @@ for example in eva_data[:args.test_number]:
 
         out = fn()
         response = tokenizer.batch_decode(out.sequences.tolist())[0]
+    elif args.model == 'olmo':
+        device = 'cuda:0' if torch.cuda.is_available() else 'cpu'
+        from transformers import AutoTokenizer, AutoModelForCausalLM
+        tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True)
+        model = AutoModelForCausalLM.from_pretrained(model_path, trust_remote_code=True)
+        model = model.to(device)
+        
+        # Send inputs to the appropriate device
+        inputs = inputs.to(device)
+        response = model.generate(**inputs, max_new_tokens=100)
+        response = tokenizer.decode(response.cpu()[0] if device != 'cpu' else response[0], skip_special_tokens=True)
     else:
         inputs = inputs.to('cuda:0')
         response = model.generate(**inputs, max_new_tokens=100)

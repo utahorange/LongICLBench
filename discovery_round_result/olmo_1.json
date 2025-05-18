@@ -1,0 +1,32 @@
+[
+  {
+    "sentence1": "look for any other fasteners that might prevent removal of the refrigerator.",
+    "sentence2": "inside the rv, underneath the refrigerator, there is usually a bead of silicone that needs to be cut with a razor knife.",
+    "label": "next",
+    "pred": "as it was in fact the as"
+  },
+  {
+    "sentence1": "Amazon has also experienced strong growth with the Kindle Fire and its successors, moving rapidly to secure nearly 10% of the market.",
+    "sentence2": "Tablet shipment numbers have been viewed as flawed as each new iPad competitor flooded the market with shipments only to see the devices languish on store shelves.",
+    "label": "historically",
+    "pred": "was in fact: the least) as it was in the least"
+  },
+  {
+    "sentence1": "Most of the domestic helpers are experience maids.... painstaking trained by Sg employers.",
+    "sentence2": "In the Philippines, the median salary for a housekeeper is around 129,000 pesos or less than $3,000 (S $90) a year, according to PayScale, a compensation data provider.",
+    "label": "by_comparison",
+    "pred": "was in fact) as it was in the most"
+  },
+  {
+    "sentence1": "why don't we admit openly and announce to the general public more frequently in our writings that scientific research is indeed a fun activity?",
+    "sentence2": "Compare the version here, which is from Feynman, R. (1985), Surely you're joking Mr. Feynman, with that in Feynman & Sykes (1994), No Ordinary Genius.",
+    "label": "for_example",
+    "pred": "was in the was in the least"
+  },
+  {
+    "sentence1": "Thus, the exception set forth in Shaw is not applicable and, unless saved by another ERISA provision, Section 1722 will be preempted.",
+    "sentence2": "Section 1722 falls within the purview of the saving clause which specifically reserves the regulation of insurance to the states.",
+    "label": "arguably",
+    "pred": "was in the most: the least) as it was in the least"
+  }
+]
